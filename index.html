@@ -24,6 +24,13 @@
 			animation-delay: 1500ms;
 		}
 
+		.table-pos {
+			color: green;
+		}
+		.table-neg {
+			color: red;
+		}
+
 		.circular-chart {
 			display: block;
 			margin: 10px auto;
@@ -54,6 +61,67 @@
 			font-family: sans-serif;
 			font-size: 0.2em;
 			text-anchor: middle;
+		}
+
+		.form {
+			margin: 20px 0;
+			font-size: 22px;
+		}
+		.form label {
+			width: 150px;
+			display: inline-block;
+		}
+		.form fieldset label {
+			width: 128px;
+		}
+		.form,
+		.form fieldset {
+			padding: 0 20px 10px;
+			margin-bottom: 20px;
+			border: 2px solid silver;
+		}
+		.form_short fieldset {
+			margin-top: 20px;
+			padding-top: 10px;
+		}
+		.form legend {
+			padding: 1%;
+			background-color: #fff;
+		}
+		.form input {
+			padding: 0 20px;
+		}
+		.form :-moz-ui-invalid {
+			box-shadow: none;
+		}
+		.form input {
+			outline: none;
+		}
+		.form input,
+		.form button {
+			width: 200px;
+			height: 30px;
+			border: 2px solid silver;
+			display: inline-block;
+			font-size: 20px;
+		}
+		.form input:required {
+			background: rgba(255, 255, 0, 0.1);
+		}
+		.form input:optional {
+			background: rgba(0, 0, 255, 0.1);
+		}
+		.form input::placeholder {
+			font-style: italic;
+			color: silver;
+		}
+		.form:invalid,
+		.form :invalid {
+			box-shadow: 0px 0px 2px 2px rgba(255, 0, 0, 0.5);
+		}
+		.form:valid,
+		.form :valid {
+			box-shadow: 0px 0px 2px 2px rgba(0, 255, 0, 0.5);
 		}
 	</style>
 </head>
@@ -262,6 +330,282 @@
 				<li></li>
 			</ul>
 		</footer>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout shrink">Constraint Validation API</h2>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/api-support.png" alt=">Constraint Validation API browser support">
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout shrink">required</h2>
+	</section>
+
+	<section class="slide">
+		<h2>:invalid / :valid</h2>
+		<form class="form form_short">
+			<fieldset>
+				<input type="text" placeholder="required" required>
+				<input type="text" placeholder="not required">
+			</fieldset>
+			<button>Send</button>
+		</form>
+	</section>
+
+	<section class="slide">
+		<h2>:invalid</h2>
+		<table class="api-events">
+			<thead>
+				<tr>
+					<td></td>
+					<td><img src="pictures/edge.svg" width="35%" alt="Edge"></td>
+					<td><img src="pictures/firefox.svg" width="35%" alt="Firefox"></td>
+					<td><img src="pictures/safari.svg" width="40%" alt="Safari"></td>
+					<td><img src="pictures/chrome.svg" width="50%" alt="Chrome"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&lt;input&gt;</td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+				<tr>
+					<td>&lt;fieldset&gt;</td>
+					<td><span class="table-neg">&#10007;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+				<tr>
+					<td>&lt;form&gt;</td>
+					<td><span class="table-neg">&#10007;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+				<tr>
+					<td>&lt;button&gt;</td>
+					<td><span class="table-neg">&#10007;</span></td>
+					<td><span class="table-neg">&#10007;</span><sup>1</sup></td>
+					<td><span class="table-neg">&#10007;</span></td>
+					<td><span class="table-neg">&#10007;</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			<em><sup>1</sup>input[type="submit"]:-moz-submit-invalid</code></em>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>:valid</h2>
+		<table class="api-events2">
+			<thead>
+				<tr>
+					<td></td>
+					<td><img src="pictures/edge.svg" width="35%" alt="Edge"></td>
+					<td><img src="pictures/firefox.svg" width="35%" alt="Firefox"></td>
+					<td><img src="pictures/safari.svg" width="40%" alt="Safari"></td>
+					<td><img src="pictures/chrome.svg" width="50%" alt="Chrome"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&lt;input&gt;</td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+				<tr>
+					<td>&lt;fieldset&gt;</td>
+					<td><span class="table-neg">&#10007;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+				<tr>
+					<td>&lt;form&gt;</td>
+					<td><span class="table-neg">&#10007;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+				<tr>
+					<td>&lt;button&gt;</td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout shrink">attribute</h2>
+	</section>
+
+	<section class="slide">
+		<style>
+			.th-rotate {
+				writing-mode: vertical-rl; /* Chrome */
+				writing-mode: sideways-lr;
+				float: left;
+			}
+			th {
+				position: relative;
+
+			}
+			thead th {
+				padding-right: 0 !important;
+			}
+			thead th, .table-pos, .table-neg {
+				width: 5%;
+			}
+			.slide table td:last-child, .slide table th:last-child {
+				padding-right: 0px;
+			}
+		</style>
+		<h2>Условия</h2>
+		<style>
+			th {
+				/*font-weight: normal !important;*/
+			}
+		</style>
+		<table>
+			<thead>
+				<tr>
+					<th scope="col"></th>
+					<th><span class="th-rotate">text</span></th>
+					<th><span class="th-rotate">number</span></th>
+					<th><span class="th-rotate">password</span></th>
+					<th><span class="th-rotate">email</span></th>
+					<th><span class="th-rotate">tel</span></th>
+					<th><span class="th-rotate">url</span></th>
+					<th><span class="th-rotate">file</span></th>
+					<th><span class="th-rotate">checkbox</span></th>
+					<th><span class="th-rotate">radio</span></th>
+					<th><span class="th-rotate">date*</span></th>
+					<th><span class="th-rotate">range</span></th>
+					<th><span class="th-rotate">search</span></th>
+					<th><span class="th-rotate">&lt;textarea&gt;</span></th>
+					<th><span class="th-rotate">&lt;select&gt;</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>required</th>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+				</tr>
+				<tr class="next">
+					<th>minlength/maxlength</th>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-neg">&#10007;</td>
+				</tr>
+				<tr class="next">
+					<th>min/max</th>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+				</tr>
+				<tr class="next">
+					<th>step</th>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+				</tr>
+				<tr class="next">
+					<th>pattern</th>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-pos">&#10003;</td>
+					<td class="table-neg">&#10007;</td>
+					<td class="table-neg">&#10007;</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			<em>*А также datetime, datetime-local, time, month, week.</em>
+		</p>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout shrink">type</h2>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/number-support.png" alt=">Input type nubmer browser support">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/email-tel-url-support.png" alt=">Input type email, URL, tel browser support">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/date-support.png" alt=">Input type date browser support">
 	</section>
 
 	<footer class="badge">
