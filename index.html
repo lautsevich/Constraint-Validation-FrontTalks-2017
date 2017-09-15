@@ -805,6 +805,41 @@
 		<img class="cover" src="pictures/date-support.png" alt=">Input type date browser support">
 	</section>
 
+	<section class="slide">
+		<h2>JS</h2>
+		<form class="form validate" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+			<div class="form__row">
+				<label for="quantity">Количество</label>
+				<input id="quantity" name="quantity" type="number" required>
+			</div>
+			<div class="form__row">
+				<label for="recipient">Получатель</label>
+				<input id="recipient" name="recipient" type="text" required>
+			</div>
+			<div class="form__row">
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" required>
+			</div>
+			<fieldset>
+				<legend>Доставка</legend>
+				<div class="form__row">
+					<label for="postcode">Индекс</label>
+					<input id="postcode" name="postcode" type="text" required>
+				</div>
+				<div class="form__row">
+					<label for="city">Город</label>
+					<input id="city" name="city" type="text" required>
+				</div>
+				<div class="form__row">
+					<label for="address">Адрес</label>
+					<input id="address" name="address" type="text" required>
+				</div>
+			</fieldset>
+			<button type="submit">Заказать</button>
+		</form>
+	</section>
+
+
 	<footer class="badge">
 		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
 	</footer>
@@ -813,6 +848,8 @@
 
 	<script src="node_modules/shower-core/shower.min.js"></script>
 	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+	<script src="assets/validate.js"></script>
 
 </body>
 </html>
