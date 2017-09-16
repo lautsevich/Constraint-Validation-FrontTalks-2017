@@ -596,8 +596,70 @@
 		<h2 class="shout shrink">type</h2>
 	</section>
 
+	<section class="slide">
+		<h2>Type</h2>
+		<table class="api-events">
+			<thead>
+				<tr>
+					<td></td>
+					<td><img src="pictures/edge.svg" width="35%" alt="Edge"></td>
+					<td><img src="pictures/firefox.svg" width="35%" alt="Firefox"></td>
+					<td><img src="pictures/safari.svg" width="40%" alt="Safari"></td>
+					<td><img src="pictures/chrome.svg" width="50%" alt="Chrome"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>text, password, file</td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+				<tr class="next">
+					<td>number</td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+				<tr class="next">
+					<td>range</td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+				<tr class="next">
+					<td>email, tel, url</td>
+					<td><span class="table-neg">&#10007;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+				<tr class="next">
+					<td>date*</td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-neg">&#10007;</span></td>
+					<td><span class="table-neg">&#10007;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+				<tr class="next">
+					<td>search</td>
+					<td><span class="table-neg">&#10007;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+					<td><span class="table-pos">&#10003;</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			<em>*As well as datetime, datetime-local, time, month, week.</em>
+		</p>
+	</section>
+
 	<section class="slide black">
-		<h2 class="shout shrink">Vanilla CSS</h2>
+		<h2 class="shout shrink">CSS only<br> validation</h2>
 	</section>
 
 	<section class="slide">
@@ -666,7 +728,16 @@
 		</form>
 	</section>
 
+	<section class="slide white">
+		<img class="cover" src="pictures/number-support.png" alt=">Input type number browser support">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/email-tel-url-support.png" alt=">Input type email, URL, tel browser support">
+	</section>
+
 	<section class="slide">
+		<h2>Min/maxlength attribute</h2>
 		<form class="form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
 			<div class="form__row">
 				<label for="quantity">Количество</label>
@@ -688,52 +759,27 @@
 				</div>
 				<div class="form__row">
 					<label for="city">Город</label>
-					<input id="city" name="city" type="text" required>
+					<input id="city" minlength="2" maxlength="100" name="city" type="text" required>
 				</div>
 				<div class="form__row">
 					<label for="address">Адрес</label>
-					<input id="address" name="address" type="text" required>
+					<input id="address" minlength="2" maxlength="100" name="address" type="text" required>
 				</div>
 			</fieldset>
 			<button type="submit">Заказать</button>
 		</form>
 	</section>
 
-	<section class="slide">
-		<form class="form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
-			<div class="form__row">
-				<label for="quantity">Количество</label>
-				<input id="quantity" name="quantity" type="number" required>
-			</div>
-			<div class="form__row">
-				<label for="recipient">Получатель</label>
-				<input id="recipient" name="recipient" type="text">
-			</div>
-			<div class="form__row">
-				<label for="email">Email</label>
-				<input id="email" name="email" type="email" required>
-			</div>
-			<fieldset>
-				<legend>Доставка</legend>
-				<div class="form__row">
-					<label for="postcode">Индекс</label>
-					<input id="postcode" name="postcode" type="text" required>
-				</div>
-				<div class="form__row">
-					<label for="city">Город</label>
-					<input id="city" name="city" type="text" required>
-				</div>
-				<div class="form__row">
-					<label for="address">Адрес</label>
-					<input id="address" name="address" type="text" required>
-				</div>
-			</fieldset>
-			<button type="submit">Заказать</button>
-		</form>
+	<section class="slide white">
+		<img class="cover" src="pictures/minlength-support.png" alt="Minlength attribute browser support">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/maxlength-support.png" alt="Maxlength attribute browser support">
 	</section>
 
 	<section class="slide black">
-		<h2 class="shout shrink">pattern</h2>
+		<h2 class="shout shrink">Pattern</h2>
 	</section>
 
 	<section class="slide black">
@@ -741,7 +787,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>pattern</h2>
+		<h2>Pattern capabilities</h2>
 		<ul>
 			<li>[a-z]</li>
 			<li>\w+</li>
@@ -752,58 +798,312 @@
 	</section>
 
 	<section class="slide">
-		<h2>pattern</h2>
+		<h2>Pattern</h2>
+		<pre>
+			<code>&lt;input type="text" pattern="<mark>^220[0-9]{3,}$</mark>"</code>
+			<code>       title="Please, use the 220XXX format,</code>
+			<code>       where XXX are numbers 0-9."&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Pattern</h2>
+		<pre>
+			<code>&lt;input type="text" pattern="<mark>^</mark>220[0-9]{3,}<mark>$</mark>"</code>
+			<code>       title="Please, use the 220XXX format,</code>
+			<code>       where XXX are numbers 0-9."&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Pattern</h2>
+		<pre>
+			<code>&lt;input type="text" pattern="<mark>220[0-9]{3,}</mark>"</code>
+			<code>       title="Please, use the 220XXX format,</code>
+			<code>       where XXX are numbers 0-9."&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Pattern</h2>
 		<pre>
 			<code>&lt;input type="text" pattern="220[0-9]{3,}"</code>
-			<code>       title="Формат &amp;quot;220XXX&amp;quot;,</code>
-			<code>       где &amp;quot;XXX&amp;quot; числа 0-9."&gt;</code>
+			<code>       <mark>title="Please, use the 220XXX format,</mark></code>
+			<code>       <mark>where XXX are numbers 0-9."</mark>&gt;</code>
 		</pre>
 	</section>
 
-	<section class="slide white">
-		<img class="cover" src="pictures/number-support.png" alt=">Input type nubmer browser support">
+	<section class="slide">
+		<h2>Pattern attribute</h2>
+		<form class="form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+			<div class="form__row">
+				<label for="quantity">Количество</label>
+				<input id="quantity" name="quantity" type="number" required>
+			</div>
+			<div class="form__row">
+				<label for="recipient">Получатель</label>
+				<input id="recipient" name="recipient" type="text">
+			</div>
+			<div class="form__row">
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" required>
+			</div>
+			<fieldset>
+				<legend>Доставка</legend>
+				<div class="form__row">
+					<label for="postcode">Индекс</label>
+					<input id="postcode" name="postcode" type="text" pattern="220[0-9]{3,}" title="Pattern 220XXX, where XXX are numbers 0-9." required>
+				</div>
+				<div class="form__row">
+					<label for="city">Город</label>
+					<input id="city" minlength="2" maxlength="100" name="city" type="text" required>
+				</div>
+				<div class="form__row">
+					<label for="address">Адрес</label>
+					<input id="address" minlength="2" maxlength="100" name="address" type="text" required>
+				</div>
+			</fieldset>
+			<button type="submit">Заказать</button>
+		</form>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout shrink">Bugs<br> and<br> Fallbacks</h2>
 	</section>
 
 	<section class="slide">
-		<h2>type number fallback</h2>
+		<h2>minlength / maxlength + value</h2>
+		<form class="form form_short">
+			<fieldset>
+				<input type="text" maxlength="4" value="123456" placeholder="required">
+				<input type="text" minlength="4" value="12" placeholder="required">
+			</fieldset>
+			<button>Отправить</button>
+		</form>
+	</section>
+
+	<section class="slide">
+		<h2>minlength + Edge</h2>
+		<pre>
+			<code>&lt;input type="text"</code>
+			<code>       minlength="2"</code>
+			<code>       maxlength="4"</code>
+			<code>       <mark>pattern="\w{2,}"</mark>&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Type number</h2>
 		<pre>
 			<code>&lt;input type="number" pattern="[-+]?[0-9]"&gt;</code>
+			<div class="next">
+				<code>&nbsp;</code>
+				<code>&lt;input type="number" min="2" max="20"</code>
+				<code>       pattern="[2-9]|1[0-9]|20"&gt;</code>
+			</div>
 		</pre>
 	</section>
 
 	<section class="slide">
-		<h2>type number fallback</h2>
-		<pre>
-			<code>&lt;input type="number" min="3" max="42"</code>
-			<code>       pattern="[3-9]|[1-3][0-9]|4[0-2]"&gt;</code>
-		</pre>
-	</section>
-
-	<section class="slide">
-		<h2>type email fallback</h2>
+		<h2>Type email</h2>
 		<pre>
 			<code>&lt;input type="email" </code>
-			<code>       title="Please, specify the TLD!"</code>
+			<code>       title="Please, enter a valid email address!"</code>
 			<code>       pattern="<span class="comment">email@localhost (RFC822)</span>"&gt;</code>
 		</pre>
 	</section>
 
 	<section class="slide">
-		<h2>type email fallback</h2>
+		<h2>Type email</h2>
 		<pre>
 			<code>&lt;input type="email" </code>
-			<code>       title="Please, specify the TLD!"</code>
+			<code>       title="Please, use the email@example.com format."</code>
 			<code>       pattern="<span class="comment">email@example.com</span>"&gt;</code>
 		</pre>
 	</section>
 
 	<section class="slide white">
-		<img class="cover" src="pictures/email-tel-url-support.png" alt=">Input type email, URL, tel browser support">
-	</section>
-
-	<section class="slide white">
 		<img class="cover" src="pictures/date-support.png" alt=">Input type date browser support">
 	</section>
+
+	<section class="slide">
+		<h2>Type date</h2>
+		<pre>
+			<code>&lt;input type="email" </code>
+			<code>       title="Please, use the YYYY-MM-DD format."</code>
+			<code>       pattern="(?:19|20)[0-9]{2}-</code>
+			<code>       (?:(?:0[1-9]|1[0-2])-</code>
+			<code>       (?:0[1-9]|1[0-9]|2[0-9])|</code>
+			<code>       (?:(?!02)(?:0[1-9]|1[0-2])-</code>
+			<code>       (?:30))|(?:(?:0[13578]|1[02])-31))&gt;"</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Type date</h2>
+		<pre>
+			<code>var isDateSupported = function () {</code>
+			<code>	var input = document.createElement('input');</code>
+			<code>	var value = 'a';</code>
+			<code>	input.setAttribute('type', 'date');</code>
+			<code>	input.setAttribute('value', value);</code>
+			<code>	return (input.value !== value);</code>
+			<code>};</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Type date</h2>
+		<pre>
+			<code>if (isDateSupported()) {</code>
+			<code>	<span class="comment">remove the pattern attribute</span></code>
+			<code>	<span class="comment">remove the title attribute</span></code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<form class="form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+			<div class="form__row">
+				<label for="quantity">Количество</label>
+				<input id="quantity" name="quantity" type="number" min="2" max="20" pattern="[2-9]|1[0-9]|20" required>
+			</div>
+			<div class="form__row">
+				<label for="recipient">Получатель</label>
+				<input id="recipient" name="recipient" type="text">
+			</div>
+			<div class="form__row">
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" pattern="([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+" title="Please, use the email@example.com format." required>
+			</div>
+			<fieldset>
+				<legend>Доставка</legend>
+				<div class="form__row">
+					<label for="postcode">Индекс</label>
+					<input id="postcode" name="postcode" type="text" pattern="220[0-9]{3,}" title="Please, use the 220XXX format, where XXX are numbers 0-9." required>
+				</div>
+				<div class="form__row">
+					<label for="city">Город</label>
+					<input id="city" minlength="2" maxlength="100" name="city" type="text" required>
+				</div>
+				<div class="form__row">
+					<label for="address">Адрес</label>
+					<input id="address" minlength="2" maxlength="100" name="address" type="text" required>
+				</div>
+			</fieldset>
+			<button type="submit">Заказать</button>
+		</form>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout shrink">:user-error</h2>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout"><s>:user-error</s></h2>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout shrink">:placeholder-shown</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Just in time validation</h2>
+		<pre>
+			<code>input:invalid:not(:focus)<mark>:not(:placeholder-shown)</mark> {</code>
+			<code>    color: red;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Just in time validation</h2>
+		<pre>
+			<code>input:invalid<mark>:not(:focus)</mark>:not(:placeholder-shown) {</code>
+			<code>    color: red;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Just in time validation</h2>
+		<pre>
+			<code>input<mark>:invalid</mark>:not(:focus):not(:placeholder-shown) {</code>
+			<code>    color: red;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<img class="cover" src="pictures/placeholder-shown-support.png" alt="">
+	</section>
+
+	<section class="slide">
+		<h2>Bulletproof CSS Validation</h2>
+		<style>
+			.form_jit,
+			.form_jit fieldset,
+			.form_jit input,
+			.form_jit button {
+				box-shadow: none !important;
+			}
+			.form_jit input:invalid:not(:focus):not(:placeholder-shown) {
+				box-shadow: 0px 0px 2px 2px rgba(255, 0, 0, 0.5) !important;
+			}
+			.form_jit input:valid:not(:focus):not(:placeholder-shown) {
+				box-shadow: 0px 0px 2px 2px rgba(0, 255, 0, 0.5) !important;
+			}
+		</style>
+		<form class="form form_jit" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+			<div class="form__row">
+				<label for="quantity">Количество</label>
+				<input id="quantity" name="quantity" type="number" min="2" max="20" pattern="[2-9]|1[0-9]|20" placeholder=" " required>
+			</div>
+			<div class="form__row">
+				<label for="recipient">Получатель</label>
+				<input id="recipient" name="recipient" type="text" placeholder=" ">
+			</div>
+			<div class="form__row">
+				<label for="email">Email</label>
+				<input id="email" name="email" type="email" pattern="([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+" title="Please, use the email@example.com format." placeholder=" " required>
+			</div>
+			<fieldset>
+				<legend>Доставка</legend>
+				<div class="form__row">
+					<label for="postcode">Индекс</label>
+					<input id="postcode" name="postcode" type="text" pattern="220[0-9]{3,}" title="Please, use the 220XXX format, where XXX are numbers 0-9." placeholder=" " required>
+				</div>
+				<div class="form__row">
+					<label for="city">Город</label>
+					<input id="city" minlength="2" maxlength="100" name="city" type="text" placeholder=" " required>
+				</div>
+				<div class="form__row">
+					<label for="address">Адрес</label>
+					<input id="address" minlength="2" maxlength="100" name="address" type="text" placeholder=" " required>
+				</div>
+			</fieldset>
+			<button type="submit">Заказать</button>
+		</form>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout shrink">Progressive<br> enchancement</h2>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<section class="slide">
 		<h2>JS</h2>
