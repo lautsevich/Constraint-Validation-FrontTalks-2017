@@ -737,49 +737,21 @@
 	</section>
 
 	<section class="slide">
-		<h2>Min/maxlength attribute</h2>
-		<form class="form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
-			<div class="form__row">
-				<label for="quantity">Количество</label>
-				<input id="quantity" name="quantity" type="number" required>
-			</div>
-			<div class="form__row">
-				<label for="recipient">Получатель</label>
-				<input id="recipient" name="recipient" type="text">
-			</div>
-			<div class="form__row">
-				<label for="email">Email</label>
-				<input id="email" name="email" type="email" required>
-			</div>
-			<fieldset>
-				<legend>Доставка</legend>
-				<div class="form__row">
-					<label for="postcode">Индекс</label>
-					<input id="postcode" name="postcode" type="text" required>
-				</div>
-				<div class="form__row">
-					<label for="city">Город</label>
-					<input id="city" minlength="2" maxlength="100" name="city" type="text" required>
-				</div>
-				<div class="form__row">
-					<label for="address">Адрес</label>
-					<input id="address" minlength="2" maxlength="100" name="address" type="text" required>
-				</div>
-			</fieldset>
-			<button type="submit">Заказать</button>
-		</form>
+		<h2>Attributes</h2>
+		<pre>
+			<code>&lt;input type="number"</code>
+			<code>       min="2"</code>
+			<code>       max="20"&gt;</code>
+		</pre>
 	</section>
 
-	<section class="slide white">
-		<img class="cover" src="pictures/minlength-support.png" alt="Minlength attribute browser support">
-	</section>
-
-	<section class="slide white">
-		<img class="cover" src="pictures/maxlength-support.png" alt="Maxlength attribute browser support">
-	</section>
-
-	<section class="slide black">
-		<h2 class="shout shrink">Pattern</h2>
+	<section class="slide">
+		<h2>Attributes</h2>
+		<pre>
+			<code>&lt;input type="text"</code>
+			<code>       minlength="2"</code>
+			<code>       maxlength="100"&gt;</code>
+		</pre>
 	</section>
 
 	<section class="slide black">
@@ -800,7 +772,8 @@
 	<section class="slide">
 		<h2>Pattern</h2>
 		<pre>
-			<code>&lt;input type="text" pattern="<mark>^220[0-9]{3,}$</mark>"</code>
+			<code>&lt;input type="text"</code>
+			<code>       pattern="<mark>^220[0-9]{3,}$</mark>"</code>
 			<code>       title="Please, use the 220XXX format,</code>
 			<code>       where XXX are numbers 0-9."&gt;</code>
 		</pre>
@@ -809,7 +782,8 @@
 	<section class="slide">
 		<h2>Pattern</h2>
 		<pre>
-			<code>&lt;input type="text" pattern="<mark>^</mark>220[0-9]{3,}<mark>$</mark>"</code>
+			<code>&lt;input type="text"</code>
+			<code>       pattern="<mark>^</mark>220[0-9]{3,}<mark>$</mark>"</code>
 			<code>       title="Please, use the 220XXX format,</code>
 			<code>       where XXX are numbers 0-9."&gt;</code>
 		</pre>
@@ -818,7 +792,8 @@
 	<section class="slide">
 		<h2>Pattern</h2>
 		<pre>
-			<code>&lt;input type="text" pattern="<mark>220[0-9]{3,}</mark>"</code>
+			<code>&lt;input type="text"</code>
+			<code>       pattern="<mark>220[0-9]{3,}</mark>"</code>
 			<code>       title="Please, use the 220XXX format,</code>
 			<code>       where XXX are numbers 0-9."&gt;</code>
 		</pre>
@@ -827,44 +802,11 @@
 	<section class="slide">
 		<h2>Pattern</h2>
 		<pre>
-			<code>&lt;input type="text" pattern="220[0-9]{3,}"</code>
+			<code>&lt;input type="text"</code>
+			<code>       pattern="220[0-9]{3,}"</code>
 			<code>       <mark>title="Please, use the 220XXX format,</mark></code>
 			<code>       <mark>where XXX are numbers 0-9."</mark>&gt;</code>
 		</pre>
-	</section>
-
-	<section class="slide">
-		<h2>Pattern attribute</h2>
-		<form class="form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
-			<div class="form__row">
-				<label for="quantity">Количество</label>
-				<input id="quantity" name="quantity" type="number" required>
-			</div>
-			<div class="form__row">
-				<label for="recipient">Получатель</label>
-				<input id="recipient" name="recipient" type="text">
-			</div>
-			<div class="form__row">
-				<label for="email">Email</label>
-				<input id="email" name="email" type="email" required>
-			</div>
-			<fieldset>
-				<legend>Доставка</legend>
-				<div class="form__row">
-					<label for="postcode">Индекс</label>
-					<input id="postcode" name="postcode" type="text" pattern="220[0-9]{3,}" title="Pattern 220XXX, where XXX are numbers 0-9." required>
-				</div>
-				<div class="form__row">
-					<label for="city">Город</label>
-					<input id="city" minlength="2" maxlength="100" name="city" type="text" required>
-				</div>
-				<div class="form__row">
-					<label for="address">Адрес</label>
-					<input id="address" minlength="2" maxlength="100" name="address" type="text" required>
-				</div>
-			</fieldset>
-			<button type="submit">Заказать</button>
-		</form>
 	</section>
 
 	<section class="slide black">
@@ -895,12 +837,18 @@
 	<section class="slide">
 		<h2>Type number</h2>
 		<pre>
-			<code>&lt;input type="number" pattern="[-+]?[0-9]"&gt;</code>
-			<div class="next">
-				<code>&nbsp;</code>
-				<code>&lt;input type="number" min="2" max="20"</code>
-				<code>       pattern="[2-9]|1[0-9]|20"&gt;</code>
-			</div>
+			<code>&lt;input type="number"</code>
+			<code>       pattern="[-+]?[0-9]"&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Type number</h2>
+		<pre>
+			<code>&lt;input type="number"</code>
+			<code>       min="2"</code>
+			<code>       max="20"</code>
+			<code>       pattern="[2-9]|1[0-9]|20"&gt;</code>
 		</pre>
 	</section>
 
@@ -929,7 +877,7 @@
 	<section class="slide">
 		<h2>Type date</h2>
 		<pre>
-			<code>&lt;input type="email" </code>
+			<code>&lt;input type="date" </code>
 			<code>       title="Please, use the YYYY-MM-DD format."</code>
 			<code>       pattern="(?:19|20)[0-9]{2}-</code>
 			<code>       (?:(?:0[1-9]|1[0-2])-</code>
@@ -1109,51 +1057,559 @@
 		</ul>
 	</section>
 
+	<section class="slide black">
+		<h2 class="shout shrink">reportValidity()</h2>
+	</section>
 
-
-
-
-
-
-
-
-
-
-
-
+	<section class="slide black">
+		<h2 class="shout"><s>reportValidity()</s></h2>
+	</section>
 
 	<section class="slide">
-		<h2>JS</h2>
-		<form class="form validate" action="https://echo.htmlacademy.ru" method="post" target="_blank">
+		<h2>reportValidity() in Chrome</h2>
+		<form class="form form_short" method="post" action="https://echo.htmlacademy.ru" target="_blank">
+			<script>
+			window.onload = function () {
+				var reportBug = document.getElementById("report-bug");
+				reportBug.addEventListener('blur',function (e) {
+					e.target.reportValidity();
+				},true);
+			}
+			</script>
+			<input id="report-bug" type="email" name="email" placeholder="john@doe.com" required><br>
+			<button>Отправить</button>
+		</form>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout">setCustomValidity()</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Кастомное сообщение</h2>
+		<pre>
+			<code>var field = [checking field];</code>
+			<code>field.addEventListener('blur', function () {</code>
+			<code>    if (field.validity.patternMismatch) {</code>
+			<code>        field.setCustomValidity("Error message.");</code>
+			<code>    } else {</code>
+			<code>        field.setCustomValidity("");</code>
+			<code>    }</code>
+			<code>});</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Кастомное сообщение</h2>
+		<pre>
+			<code>var field = [checking field];</code>
+			<code>field.addEventListener('blur', function () {</code>
+			<code>    if (field.validity.<mark>patternMismatch</mark>) {</code>
+			<code>        field.<mark>setCustomValidity</mark>("Error message.");</code>
+			<code>    } else {</code>
+			<code>        field.setCustomValidity("");</code>
+			<code>    }</code>
+			<code>});</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Кастомное сообщение</h2>
+		<pre>
+			<code>var field = [checking field];</code>
+			<code>field.addEventListener('blur', function () {</code>
+			<code>    if (field.validity.patternMismatch) {</code>
+			<code>        field.setCustomValidity("Error message.");</code>
+			<code>    } else {</code>
+			<code>        field.<mark>setCustomValidity("")</mark>;</code>
+			<code>    }</code>
+			<code>});</code>
+		</pre>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout shrink">validity</span></h2>
+	</section>
+
+	<section class="slide">
+		<h2>validity</span></h2>
+		<ul class="double">
+			<li class="next">valid</li>
+			<li class="next">valueMissing</li>
+			<li class="next">typeMismatch</li>
+			<li class="next">tooShort</li>
+			<li class="next">tooLong</li>
+			<li class="next">patternMismatch</li>
+			<li class="next">badInput</li>
+			<li class="next">stepMismatch</li>
+			<li class="next">rangeOverflow</li>
+			<li class="next">rangeUnderflow</li>
+		</ul>
+	</section>
+
+    <section class="slide">
+        <h2>Точка управления</h2>
+        <pre>
+            <code>var field = [checking field];</code>
+            <code>field.addEventListener('blur', function () {</code>
+            <code>    if (<mark>field.validity.patternMismatch</mark>) {</code>
+            <code>        field.setCustomValidity("Error message.");</code>
+            <code>    } else {</code>
+            <code>        field.setCustomValidity("");</code>
+            <code>    }</code>
+            <code>});</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Точка управления</h2>
+        <pre>
+            <code>var field = [checking field];</code>
+            <code>field.addEventListener('blur', function () {</code>
+            <code>    if (<mark>pass1!=pass2</mark>) {</code>
+            <code>        field.setCustomValidity("Error message.");</code>
+            <code>    } else {</code>
+            <code>        field.setCustomValidity("");</code>
+            <code>    }</code>
+            <code>});</code>
+        </pre>
+    </section>
+
+	<section class="slide">
+		<h2>Progressive Enchancement</span></h2>
+		<ul class="double">
+			<li class="next">Получить состояния полей</li>
+			<li class="next">Выключить нативную валидацию</li>
+			<li class="next">Проверять валидность при снятии фокуса с поля</li>
+			<li class="next">Идентифицировать ошибку</li>
+			<li class="next">Показать сообщение об ошибке</li>
+			<li class="next">Спрятать сообщение об ошибке</li>
+			<li class="next">Проверять поля по сабмиту формы</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Получить состояния полей</h2>
+		<pre>
+			<code>var myField = document.querySelector('input[type="text"]');</code>
+			<code><mark>var validityState = myField.validity;</mark></code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Выключить нативную валидацию</h2>
+		<pre>
+			<code>var forms = document.querySelectorAll('.validate');</code>
+			<code>for (var i = 0; i < forms.length; i++) {</code>
+			<code>	forms[i].<mark>setAttribute('novalidate', true)</mark>;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Проверять валидность при снятии фокуса</h2>
+		<pre>
+			<code><mark>var hasError = function (field)</mark> {</code>
+			<code>	// Get the error</code>
+			<code>}</code>
+			<code>document.addEventListener('blur', function (event) {</code>
+			<code>    if (!event.target.form.classList.contains('validate'))</code>
+			<code>    return;</code>
+			<code>    var error = hasError(event.target);</code>
+			<code>}, true);</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Проверять валидность при снятии фокуса</h2>
+		<pre>
+			<code>var hasError = function (field) {</code>
+			<code>	// Get the error</code>
+			<code>}</code>
+			<code><mark>document.addEventListener('blur', function (event)</mark> {</code>
+			<code>    if (!event.target.form.classList.contains('validate'))</code>
+			<code>    return;</code>
+			<code>    var error = hasError(event.target);</code>
+			<code>}, true);</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Идентифицировать ошибку</h2>
+		<pre>
+			<code>var hasError = function (field) {</code>
+			<code>	// Get the error</code>
+			<code>}</code>
+			<code>document.addEventListener('blur', function (event) {</code>
+			<code>    if (!event.target.form.classList.contains('validate'))</code>
+			<code>    return;</code>
+			<code>    var error = <mark>hasError(event.target)</mark>;</code>
+			<code>}, true);</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Идентифицировать ошибку</h2>
+		<pre>
+			<code>var hasError = function (field) {</code>
+			<code>	// If there's no error, return null</code>
+			<code>	var validity = field.validity;</code>
+			<code>	// If valid, return null</code>
+			<code>	<mark>if (validity.valid) return;</mark></code>
+			<code>	// If field is required and empty</code>
+			<code>	if (validity.valueMissing)</code>
+			<code>	return 'Please fill out this field.';</code>
+			<code>	// and so one</code>
+			<code>};</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Идентифицировать ошибку</h2>
+		<pre>
+			<code>var hasError = function (field) {</code>
+			<code>	var validity = field.validity;</code>
+			<code>	// If valid, return null</code>
+			<code>	if (validity.valid) return;</code>
+			<code>	// If field is required and empty</code>
+			<code>	<mark>if (validity.valueMissing)</mark>;</code>
+			<code>	<mark>return 'Please fill out this field.'</mark>;</code>
+			<code>	// and so one</code>
+			<code>};</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Идентифицировать ошибку</h2>
+		<pre>
+			<code>if (validity.typeMismatch) {</code>
+			<code>	// Email</code>
+			<code>	<mark>if (field.type === 'email')</mark></code>
+			<code>	<mark>return 'Please enter an email address.';</mark></code>
+			<code>	// URL</code>
+			<code>	if (field.type === 'url')</code>
+			<code>	return 'Please enter a URL.';</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Идентифицировать ошибку</h2>
+		<pre>
+			<code>// If too short</code>
+			<code>if (validity.tooShort)</code>
+			<code>return 'Please lengthen this text to</code>
+			<code>' + <mark>field.getAttribute('minLength')</mark> +</code>
+			<code>' characters or more. You are currently using</code>
+			<code>' + field.value.length + ' characters.';</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Идентифицировать ошибку</h2>
+		<pre>
+			<code>// If too short</code>
+			<code>if (validity.tooShort)</code>
+			<code>return 'Please lengthen this text to</code>
+			<code>' + field.getAttribute('minLength') +</code>
+			<code>' characters or more. You are currently using</code>
+			<code>' + <mark>field.value.length</mark> + ' characters.';</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Идентифицировать ошибку</h2>
+		<pre>
+			<code>// If a number field is over the max</code>
+			<code>if (validity.rangeOverflow)</code>
+			<code>return 'Please select a value that is no more than ' +</code>
+			<code>field.<mark>getAttribute('max')</mark> + '.';</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Идентифицировать ошибку</h2>
+		<pre>
+			<code>if (validity.patternMismatch) {</code>
+			<code>	// If pattern info is included, return custom error</code>
+			<code>	if (field.<mark>hasAttribute('title')</mark>)</code>
+			<code>	return field.getAttribute('title');</code>
+			<code>	// Otherwise, generic error</code>
+			<code>	return 'Please match the requested format.';</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Идентифицировать ошибку</h2>
+		<pre>
+			<code>if (validity.patternMismatch) {</code>
+			<code>	// If pattern info is included, return custom error</code>
+			<code>	if (field.hasAttribute('title'))</code>
+			<code>	return <mark>field.getAttribute('title')</mark>;</code>
+			<code>	// Otherwise, generic error</code>
+			<code>	return 'Please match the requested format.';</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Идентифицировать ошибку</h2>
+		<pre>
+			<code>if (validity.patternMismatch) {</code>
+			<code>	// If pattern info is included, return custom error</code>
+			<code>	if (field.hasAttribute('title'))</code>
+			<code>	return field.getAttribute('title');</code>
+			<code>	// Otherwise, generic error</code>
+			<code>	<mark>return 'Please match the requested format.';</mark></code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Show an error message</h2>
+		<pre>
+			<code>var showError = <mark>function (field, error)</mark> {</code>
+			<code>	// Show the error message...</code>
+			<code>};</code>
+			<code>document.addEventListener('blur', function (event) {</code>
+			<code>	...</code>
+			<code>	if (error) {</code>
+			<code>		showError(event.target, error);</code>
+			<code>	}</code>
+			<code>}</code>
+			<code>}, true);</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Show an error message</h2>
+		<pre>
+			<code>var showError = function (field, error) {</code>
+			<code>	// Show the error message...</code>
+			<code>};</code>
+			<code>document.addEventListener('blur', function (event) {</code>
+			<code>	...</code>
+			<code>	<mark>if (error) {</mark></code>
+			<code>	<mark>	showError(event.target, error);</mark></code>
+			<code>	<mark>}</mark></code>
+			<code>}</code>
+			<code>}, true);</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Show an error message</h2>
+		<pre>
+			<code>// Add error class to field</code>
+			<code>field.classList.add('error');</code>
+			<code> </code>
+			<code>// Get field id or name</code>
+			<code>var id = field.id || field.name;</code>
+			<code>if (!id) return;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Show an error message</h2>
+		<pre>
+			<code>// If error message field not exists, create one</code>
+			<code>var message = field.form.querySelector</code>
+			<code>('.error-message#error-for-' + id );</code>
+			<code>if (!message) {</code>
+			<code>	message = document.createElement('div');</code>
+			<code>	message.className = 'error-message';</code>
+			<code>	message.id = 'error-for-' + id;</code>
+			<code>	field.parentNode.insertBefore( message, field.nextSibling );</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Show an error message</h2>
+		<pre>
+			<code>// Update error message</code>
+			<code>message.innerHTML = error;</code>
+			<code> </code>
+			<code>// Show error message</code>
+			<code>message.style.display = 'block';</code>
+			<code>message.style.visibility = 'visible';</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Show an error message</h2>
+		<pre>
+			<code>// Add ARIA role to the field</code>
+			<code>field.setAttribute('aria-describedby', 'error-for-' + id);</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Hide an error message</h2>
+		<pre>
+			<code>var removeError = function (field) {</code>
+			<code>	// Remove the error message...</code>
+			<code>};</code>
+			<code> </code>
+			<code>document.addEventListener('blur', function (event) {</code>
+			<code>	...</code>
+			<code>	// Otherwise, remove any existing error message</code>
+			<code>	removeError(event.target);</code>
+			<code>}, true);</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Hide an error message</h2>
+		<pre>
+			<code>// Remove error class to field</code>
+			<code>field.classList.remove('error');</code>
+			<code> </code>
+			<code>// Remove ARIA role from the field</code>
+			<code>field.removeAttribute('aria-describedby');</code>
+			<code> </code>
+			<code>// Get field id or name</code>
+			<code>var id = field.id || field.name;</code>
+			<code>if (!id) return;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Hide an error message</h2>
+		<pre>
+			<code>// Check if an error message is in the DOM</code>
+			<code>var message = field.form.querySelector</code>
+			<code>('.error-message#error-for-' + id + '');</code>
+			<code>if (!message) return;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Hide an error message</h2>
+		<pre>
+			<code>// If so, hide it</code>
+			<code>message.innerHTML = '';</code>
+			<code>message.style.display = 'none';</code>
+			<code>message.style.visibility = 'hidden';</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Checking all fields on submit</h2>
+		<pre>
+			<code>document.addEventListener('submit', function (event) {</code>
+			<code>	// Validate all fields...</code>
+			<code>}, false);</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Checking all fields on submit</h2>
+		<pre>
+			<code>// Only run on forms flagged for validation</code>
+			<code>if (!event.target.classList.contains('validate')) return;</code>
+			<code> </code>
+			<code>// Get all of the form elements</code>
+			<code>var fields = event.target.elements;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Checking all fields on submit (com)</h2>
+		<pre>
+			<!-- // Validate each field
+			// Store the first field with an error to a variable so we can bring it into focus later
+			var error, hasErrors; -->
+			<code>var error, hasErrors;</code>
+			<code>for (var i = 0; i < fields.length; i++) {</code>
+			<code>	error = hasError(fields[i]);</code>
+			<code>	if (error) {</code>
+			<code>		showError(fields[i], error);</code>
+			<code>		if (!hasErrors) {</code>
+			<code>			hasErrors = fields[i];</code>
+			<code>		}</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Checking all fields on submit</h2>
+		<pre>
+			<code>// If there are errrors, don't submit form and focus on first element with error</code>
+			<code>if (hasErrors) {</code>
+			<code>	event.preventDefault();</code>
+			<code>	hasErrors.focus();</code>
+			<code>}</code>
+			<code>// Otherwise, let the form submit normally</code>
+			<code>// You could also bolt in an Ajax form submit process here</code>
+		</pre>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout shrink">Bulletproof <br> Validation</h2>
+	</section>
+
+	<section class="slide">
+		<style>
+			.form_jit,
+			.form_jit fieldset,
+			.form_jit input,
+			.form_jit button {
+				box-shadow: none !important;
+			}
+			.form_jit .error:invalid:not(:focus):not(:placeholder-shown) {
+				box-shadow: 0px 0px 2px 2px rgba(255, 0, 0, 0.5) !important;
+			}
+			.error-message {
+				color: rgba(255, 0, 0, 0.5);
+				display: inline-block;
+				font-size: 14px;
+				margin-left: 154px;
+				line-height: 20px;
+			}
+			fieldset .error-message {
+				margin-left: 134px;
+			}
+			.form_jit input:valid:not(:focus):not(:placeholder-shown) {
+				box-shadow: 0px 0px 2px 2px rgba(0, 255, 0, 0.5) !important;
+			}
+		</style>
+		<form class="form form_jit validate" action="https://echo.htmlacademy.ru" method="post" target="_blank">
 			<div class="form__row">
 				<label for="quantity">Количество</label>
-				<input id="quantity" name="quantity" type="number" required>
+				<input id="quantity" name="quantity" type="number" min="2" max="20" pattern="[2-9]|1[0-9]|20" placeholder=" " required>
 			</div>
 			<div class="form__row">
 				<label for="recipient">Получатель</label>
-				<input id="recipient" name="recipient" type="text" required>
+				<input id="recipient" name="recipient" type="text" placeholder=" ">
 			</div>
 			<div class="form__row">
 				<label for="email">Email</label>
-				<input id="email" name="email" type="email" required>
+				<input id="email" name="email" type="email" pattern="([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+" title="Please, use the email@example.com format." placeholder=" " required>
 			</div>
 			<fieldset>
 				<legend>Доставка</legend>
 				<div class="form__row">
 					<label for="postcode">Индекс</label>
-					<input id="postcode" name="postcode" type="text" required>
+					<input id="postcode" name="postcode" type="text" pattern="220[0-9]{3,}" title="Please, use the 220XXX format, where XXX are numbers 0-9." placeholder=" " required>
 				</div>
 				<div class="form__row">
 					<label for="city">Город</label>
-					<input id="city" name="city" type="text" required>
+					<input id="city" minlength="2" maxlength="100" name="city" type="text" placeholder=" " required>
 				</div>
 				<div class="form__row">
 					<label for="address">Адрес</label>
-					<input id="address" name="address" type="text" required>
+					<input id="address" minlength="2" maxlength="100" name="address" type="text" placeholder=" " required>
 				</div>
 			</fieldset>
 			<button type="submit">Заказать</button>
 		</form>
+	</section>
+
+	<section class="slide">
+		<h2>Polyfill</h2>
 	</section>
 
 
