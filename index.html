@@ -150,24 +150,24 @@
 <body class="shower list">
 
 	<header class="caption">
-		<h1>Native validation as a framework</h1>
-		<p>Pavel Lautsevich, LOVATA</p>
+		<h1>Нативная валидация как фреймворк</h1>
+		<p>Павел Ловцевич, LOVATA</p>
 	</header>
 
 	<section class="slide white" id="cover">
 		<h2>Нативная валидация как фреймворк</h2>
-		<p><a href="http://twitter.com/zigzag_mcquack">Павел Ловцевич</a></p>
+		<p><a href="http://twitter.com/zigzag_mcquack">Павел Ловцевич</a>, <a href="https://lovata.com" target="_blank">LOVATA</a></p>
 		<img class="cover" src="pictures/cover.jpg" alt="">
 		<style>
 			#cover h2 {
 				margin: 30px 0 0;
-				text-align: center;
+				text-align: right;
 				font-size: 70px;
 				color: #fff;
 			}
 			#cover p {
 				margin: 10px 0 0;
-				text-align: center;
+				text-align: right;
 				font-style: italic;
 				font-size: 20px;
 				color: #fff;
@@ -191,7 +191,7 @@
 			}
 		</style>
 		<img src="pictures/about.jpg" class="cover" alt="Pavel Lautsevich">
-		<h2>Pavel Lautsevich</h2>
+		<h2>Павел Ловцевич</h2>
 		<p>
 			CTO @ <a href="http://lovata.com" target="_blank">LOVATA</a> &amp; <a href="http://2doc.by" target="_blank">2doc.by</a><br>
 			<a href="https://twitter.com/zigzag_mcquack" target="_blank">@zigzag_mcquack</a>
@@ -287,10 +287,10 @@
 	<section class="slide">
 		<h2>Хорошая валидация</h2>
 		<ul>
-			<li class="next">Правильное место</li>
-			<li class="next">Правильное время</li>
-			<li class="next">Подходящий цвет</li>
-			<li class="next">Понятный язык</li>
+			<li class="next">Правильное место.</li>
+			<li class="next">Правильное время.</li>
+			<li class="next">Подходящий цвет.</li>
+			<li class="next">Понятный язык.</li>
 		</ul>
 		<p><a href="https://designmodo.com/ux-form-validation/" target="_blank">The Ultimate UX Design of Form Validation</a>, Marcin Treder, March 20, 2013</p>
 	</section>
@@ -491,6 +491,8 @@
 				writing-mode: vertical-rl; /* Chrome */
 				writing-mode: sideways-lr;
 				float: left;
+				position: relative;
+				left: -15px;
 			}
 			th {
 				position: relative;
@@ -755,11 +757,15 @@
 	</section>
 
 	<section class="slide white">
-		<img class="cover" src="pictures/number-support.png" alt=">Input type number browser support">
+		<img class="cover" src="pictures/number-support.png" alt="Input type number browser support">
 	</section>
 
 	<section class="slide white">
-		<img class="cover" src="pictures/email-tel-url-support.png" alt=">Input type email, URL, tel browser support">
+		<img class="cover" src="pictures/sheremetyevo.jpg" alt="Wront type number usage">
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/email-tel-url-support.png" alt="Input type email, URL, tel browser support">
 	</section>
 
 	<section class="slide">
@@ -772,7 +778,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>Атрибуты minlength и minlength</h2>
+		<h2>Атрибуты minlength и maxlength</h2>
 		<pre>
 			<code>&lt;input type="text"</code>
 			<code>       minlength="2"</code>
@@ -851,7 +857,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>minlength in Edge</h2>
+		<h2>minlength в Edge</h2>
 		<pre>
 			<code>&lt;input type="text"</code>
 			<code>       minlength="2"</code>
@@ -955,6 +961,14 @@
 	</section>
 
 	<section class="slide black">
+		<h2 class="shout shrink">:user-invalid</h2>
+	</section>
+
+	<section class="slide black">
+		<h2 class="shout"><s>:user-invalid</s></h2>
+	</section>
+
+	<section class="slide black">
 		<h2 class="shout shrink">:placeholder-shown</h2>
 	</section>
 
@@ -1037,8 +1051,17 @@
 		</form>
 	</section>
 
+	<section class="slide">
+		<h2>Проблемы нативных сообщений</h2>
+		<ul>
+			<li class="next">Невозможность стилизации.</li>
+			<li class="next">Разные приципы работы в браузерах.</li>
+			<li class="next">Частичная недоступность для Screen Readers.</li>
+		</ul>
+	</section>
+
 	<section class="slide black">
-		<h2 class="shout shrink">a11y 😢</h2>
+		<img src="pictures/guy.jpg" class="cover" alt="" />
 	</section>
 
 	<section class="slide black">
@@ -1073,7 +1096,7 @@
 	</section>
 
 	<section class="slide">
-		<h2>reportValidity() in Chrome</h2>
+		<h2>reportValidity() в Chrome</h2>
 		<form class="form form_short" method="post" action="https://echo.htmlacademy.ru" target="_blank">
 			<script>
 			window.onload = function () {
@@ -1189,13 +1212,14 @@
 	<section class="slide">
 		<h2>Progressive enchancement</span></h2>
 		<ul class="double">
-			<li class="next">Получить состояния полей</li>
-			<li class="next">Выключить нативную валидацию</li>
-			<li class="next">Проверять валидность при снятии фокуса с поля</li>
-			<li class="next">Идентифицировать ошибку</li>
-			<li class="next">Показать сообщение об ошибке</li>
-			<li class="next">Спрятать сообщение об ошибке</li>
-			<li class="next">Проверять поля по сабмиту формы</li>
+			<li class="next">Получить состояния полей.</li>
+			<li class="next">Выключить нативную валидацию.</li>
+			<li class="next">Проверять валидность при снятии фокуса с поля.</li>
+			<li class="next">Идентифицировать ошибку.</li>
+			<li class="next">Показать сообщение об ошибке.</li>
+			<li class="next">Стилизовать сообщение об ошибке.</li>
+			<li class="next">Сделать сообщение об ошибке дружественным для a11y.</li>
+			<li class="next">Проверять поля по сабмиту формы.</li>
 		</ul>
 	</section>
 
@@ -1211,7 +1235,7 @@
 		<h2>Выключить нативную валидацию</h2>
 		<pre>
 			<code>var forms = document.<mark>querySelectorAll('.validate')</mark>;</code>
-			<code>for (var i = 0; i <span forms.length; i++) {</code>
+			<code>for (var i = 0; i < forms.length; i++) {</code>
 			<code>	forms[i].<mark>setAttribute('novalidate', true)</mark>;</code>
 			<code>}</code>
 		</pre>
@@ -1441,6 +1465,21 @@
 			<code>('.error-message#error-for-' + id );</code>
 			<code>if (!message) {</code>
 			<code>	message = document.createElement('div');</code>
+			<code>	<mark>message.className = 'error-message';</mark></code>
+			<code>	message.id = 'error-for-' + id;</code>
+			<code>	field.parentNode.insertBefore( message, field.nextSibling );</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Отображаем сообщение об ошибке</h2>
+		<pre>
+			<code><span class="comment">// If error message field not exists, create one</span></code>
+			<code>var message = field.form.querySelector</code>
+			<code>('.error-message#error-for-' + id );</code>
+			<code>if (!message) {</code>
+			<code>	message = document.createElement('div');</code>
 			<code>	message.className = 'error-message';</code>
 			<code>	<mark>message.id = 'error-for-' + id;</mark></code>
 			<code>	field.parentNode.insertBefore( message, field.nextSibling );</code>
@@ -1486,7 +1525,7 @@
 		<h2>Скрываем сообщение об ошибке</h2>
 		<pre>
 			<code><span class="comment">// Remove error class to field</span></code>
-			<code>field.classList.remove('error');</code>
+			<code><mark>field.classList.remove('error');</mark></code>
 			<code> </code>
 			<code><span class="comment">// Remove ARIA role from the field</span></code>
 			<code>field.removeAttribute('aria-describedby');</code>
@@ -1494,6 +1533,36 @@
 			<code><span class="comment">// Get field id or name</span></code>
 			<code>var id = field.id || field.name;</code>
 			<code>if (!id) return;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Скрываем сообщение об ошибке</h2>
+		<pre>
+			<code><span class="comment">// Remove error class to field</span></code>
+			<code>field.classList.remove('error');</code>
+			<code> </code>
+			<code><span class="comment">// Remove ARIA role from the field</span></code>
+			<code><mark>field.removeAttribute('aria-describedby');</mark></code>
+			<code> </code>
+			<code><span class="comment">// Get field id or name</span></code>
+			<code>var id = field.id || field.name;</code>
+			<code>if (!id) return;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Скрываем сообщение об ошибке</h2>
+		<pre>
+			<code><span class="comment">// Remove error class to field</span></code>
+			<code>field.classList.remove('error');</code>
+			<code> </code>
+			<code><span class="comment">// Remove ARIA role from the field</span></code>
+			<code>field.removeAttribute('aria-describedby');</code>
+			<code> </code>
+			<code><span class="comment">// Get field id or name</span></code>
+			<code><mark>var id = field.id || field.name;</mark></code>
+			<code><mark>if (!id) return;</mark></code>
 		</pre>
 	</section>
 
@@ -1552,7 +1621,7 @@
 		<h2>Валидация полей при отправке формы</h2>
 		<pre>
 			<code>var error, hasErrors;</code>
-			<code>for (var i = 0; i <spanr fields.length; i++) {</code>
+			<code>for (var i = 0; i < fields.length; i++) {</code>
 			<code>	<mark>error = hasError(fields[i]);</mark></code>
 			<code>	if (error) {</code>
 			<code>		showError(fields[i], error);</code>
@@ -1567,11 +1636,23 @@
 	<section class="slide">
 		<h2>Валидация полей при отправке формы</h2>
 		<pre>
-			<code><span class="comment">// If there are errrors, don't submit form</spanr></code>
+			<code><span class="comment">// If there are errrors, don't submit form</></code>
+			<code><span class="comment">and focus on first element with error</spanr></code>
+			<code>if (hasErrors) {</code>
+			<code>	<mark>event.preventDefault();</mark></code>
+			<code>	hasErrors.focus();</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>Валидация полей при отправке формы</h2>
+		<pre>
+			<code><span class="comment">// If there are errrors, don't submit form</></code>
 			<code><span class="comment">and focus on first element with error</spanr></code>
 			<code>if (hasErrors) {</code>
 			<code>	event.preventDefault();</code>
-			<code>	hasErrors.focus();</code>
+			<code>	<mark>hasErrors.focus();</mark></code>
 			<code>}</code>
 		</pre>
 	</section>
@@ -1638,15 +1719,80 @@
 	</section>
 
 	<section class="slide">
-		<h2>Validate.js</h2>
+		<h2>Серия статей Form Validation</h2>
+		<style>
+			.guy {
+				display: flex;
+			}
+			.guy figure {
+				margin-right: 60px;
+			}
+		</style>
+		<div class="guy">
+			<figure>
+				<img src="pictures/chris-ferdinandi.jpeg" width="96.5%" alt="">
+				<figcaption><a href="https://twitter.com/chrisferdinandi" target="blank">Chris Ferdinandi</a></figcaption>
+			</figure>
+			<ul>
+				<li><a href="https://css-tricks.com/form-validation-part-1-constraint-validation-html" target="_blank">Part 1: Constraint Validation in HTML</a></li>
+				<li><a href="https://css-tricks.com/form-validation-part-2-constraint-validation-api-javascript" target="_blank">Part 2: The Constraint Validation API (JavaScript) </a></li>
+				<li><a href="https://css-tricks.com/form-validation-part-3-validity-state-api-polyfill" target="_blank">Part 3: A Validity State API Polyfill</a></li>
+			</ul>
+		</div>
 	</section>
 
 	<section class="slide">
-		<h2>Polyfill</h2>
+		<h2>Серия статей Native Form Validation</h2>
+		<div class="guy">
+			<figure>
+				<img src="pictures/peter-paul-koch.jpeg" width="80%" alt="">
+				<figcaption><a href="https://twitter.com/ppk/" target="blank">Peter-Paul Koch</a></figcaption>
+			</figure>
+			<ul>
+				<li><a href="https://medium.com/samsung-internet-dev/native-form-validation-part-1-bf8e35099f1d" target="_blank">Part 1</a></li>
+				<li><a href="https://medium.com/samsung-internet-dev/native-form-validation-part-2-552c78f563b" target="_blank">Part 2</a></li>
+				<li><a href="https://medium.com/samsung-internet-dev/native-form-validation-part-3-8e643e1dd06" target="_blank">Part 3</a></li>
+			</ul>
+		</div>
 	</section>
 
 	<section class="slide">
 		<h2>Выводы</h2>
+		<ul>
+			<li class="next">Прогрессивное улучшение.</li>
+			<li class="next">Компактность (validate.js, 6Кб, 2.7 Кб минифицированный).</li>
+			<li class="next">Обратная связь авторам API.</li>
+			<li class="next">Перспектива отсутствия прослойки и максимальная скорость.</li>
+		</ul>
+	</section>
+
+	<section class="slide white">
+		<img class="cover" src="pictures/sitnik-api.png" alt="" />
+	</section>
+
+	<section class="slide white" id="fin">
+		<style>
+			#fin {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+			}
+			#fin h2 {
+				color: #fff;
+				font-size: 75px;
+				margin-bottom: 0;
+			}
+			#fin a {
+				color: #fff;
+				font-size: 26px;
+				font-weight: bold;
+			}
+		</style>
+		<h2>Спасибо за внимание!</h2>
+		<p>
+			<a href="https://bit.ly/Native-Validation-FrontTalks">bit.ly/Native-Validation-FrontTalks</a>
+		</p>
+		<img class="cover" src="pictures/heads.png" alt="" />
 	</section>
 
 	<footer class="badge">
